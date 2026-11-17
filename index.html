@@ -71,6 +71,10 @@ header.nav{position:fixed;top:0;left:0;right:0;z-index:20;padding-top:env(safe-a
 .lb:hover .lv,.lb:focus-visible .lv,.lb.on .lv{max-height:34px;opacity:1;margin-top:8px}
 .dots{display:inline-flex;gap:5px}.dots i{width:9px;height:9px;border-radius:50%;background:rgba(232,226,212,.18)}.dots i.f{background:var(--brass)}
 [hidden]{display:none!important}
+.bx .sub{display:block;font:500 1.02rem/1.4 'Source Sans 3',sans-serif;color:var(--brass);margin:-4px 0 14px}
+.bx ul{margin:0 0 10px;padding-left:18px;color:#C9C5B8;font-size:1rem}.bx li{margin-bottom:8px}.bx li::marker{color:var(--brass)}
+.repo{display:inline-block;margin-top:16px;padding:6px 18px;border-radius:99px;border:1px solid var(--brass);color:var(--brass);text-decoration:none;font:500 .95rem 'Source Sans 3',sans-serif;transition:background .2s,color .2s}
+.repo:hover{background:var(--brass);color:#16110A}
 section{padding:88px 0}
 h2{font-size:clamp(2.4rem,6vw,3.8rem);margin-bottom:40px}
 
@@ -123,7 +127,7 @@ h2{font-size:clamp(2.4rem,6vw,3.8rem);margin-bottom:40px}
 </head>
 <body>
 <header class="nav"><div class="in">
-  <nav class="links" aria-label="Sections"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a><a class="cvbtn" href="https://drive.google.com/uc?export=download&amp;id=1DLa4ls51-4_bYVfSHmvzEen-25CzW2O8" target="_blank" rel="noopener">Resume</a></nav>
+  <nav class="links" aria-label="Sections"><a href="#experience">Experience</a><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a><a class="cvbtn" href="https://drive.google.com/uc?export=download&amp;id=1DLa4ls51-4_bYVfSHmvzEen-25CzW2O8" target="_blank" rel="noopener">Resume</a></nav>
 </div></header>
 
 <main id="top">
@@ -148,13 +152,21 @@ h2{font-size:clamp(2.4rem,6vw,3.8rem);margin-bottom:40px}
   </div>
 </div>
 
-<section id="work"><div class="wrap">
+<section id="experience"><div class="wrap">
+  <h2>Professional experience</h2>
+  <div class="bento">
+    <article class="bx s3"><span class="ghost" aria-hidden="true">Full</span><time>Present</time><h3>Python Full Stack Developer Intern</h3><span class="sub">Info Campus, Kozhikode</span><ul><li>Developing full-stack web applications with Python on the back end and React on the front end, covering REST API development and front-end integration.</li></ul></article>
+    <article class="bx s3 warm"><span class="ghost" aria-hidden="true">Bot</span><time>Jun 2025</time><h3>Robotics &amp; Automation Intern</h3><span class="sub">Retechnox, Kozhikode</span><ul><li>Completed structured training in robotics fundamentals &mdash; sensors, actuators, system integration, signal processing, and component interfacing.</li></ul></article>
+  </div>
+</div></section>
+
+<section id="work" style="padding-top:0"><div class="wrap">
   <h2>Selected work</h2>
   <div class="bento">
-    <article class="bx s3"><span class="ghost" aria-hidden="true">React</span><span class="k">Front end &middot; 3D</span><h3>Weather Dashboard</h3><p>Search any city and see current weather, wind speed, coordinates and a five-day forecast, pulled live from the Open-Meteo REST API.</p><p>A rotating 3D Earth built with Three.js adds depth. Recent searches are saved in the browser, with loading and error states handled throughout.</p><div class="pills"><span>React</span><span>JavaScript</span><span>Open-Meteo API</span><span>Three.js</span><span>CSS</span></div></article>
-    <article class="bx s3"><span class="ghost" aria-hidden="true">RAG</span><time>Aug – Sep 2026</time><h3>AI Incident Investigator</h3><p>Reads log files, finds anomalies with Isolation Forest, and names the affected services and their severity.</p><p>RAG and semantic search, with Qwen3 behind a FastAPI service, explain each incident and suggest troubleshooting steps.</p><div class="pills"><span>Isolation Forest</span><span>RAG</span><span>Qwen3</span><span>FastAPI</span></div></article>
-    <article class="bx s3"><span class="ghost" aria-hidden="true">YOLO</span><time>Jul 2025 – May 2026</time><h3>Real-Time Agricultural Monitoring</h3><p>A YOLOv9 detection pipeline that picks out tomato plants, weeds and pests from live field footage.</p><p>CNN and LSTM models forecast weather patterns, so crop protection can start early.</p><div class="pills"><span>YOLOv9</span><span>CNN</span><span>LSTM</span></div></article>
-    <article class="bx s3 warm"><span class="ghost" aria-hidden="true">BERT</span><time>Dec 2024 – Apr 2025</time><h3>Automatic Essay Grading</h3><p>A fine-tuned BERT model that scores student essays and replaces manual evaluation. Text preprocessing and embeddings keep its scores close to human-graded benchmarks.</p><div class="pills"><span>BERT</span><span>NLP</span><span>Embeddings</span></div></article>
+    <article class="bx s3"><span class="ghost" aria-hidden="true">React</span><h3>Kaalavastha</h3><span class="sub">Weather Dashboard (React.js)</span><ul><li>Built an interactive weather dashboard using React.js, JavaScript, and the Open-Meteo REST API, letting users search any city for current conditions, wind speed, coordinates, and a five-day forecast.</li><li>Integrated a rotating 3D Earth with Three.js and React Three Fiber, and added recent-search history (localStorage), async data fetching, and loading/error handling using React hooks.</li></ul><div class="pills"><span>React.js</span><span>JavaScript</span><span>Three.js</span><span>React Three Fiber</span><span>Open-Meteo API</span></div><a class="repo" href="https://github.com/anshiid/Kaalavastha" target="_blank" rel="noopener">Repo &#8599;</a></article>
+    <article class="bx s3"><span class="ghost" aria-hidden="true">YOLO</span><h3>Agri-Bot-System</h3><span class="sub">Real-Time AI-Based Agricultural Monitoring System</span><ul><li>Developed a real-time detection pipeline using YOLOv9 to identify tomato plants, weeds, and pests from live field footage.</li><li>Combined CNN and LSTM models to forecast weather patterns, supporting proactive crop protection decisions.</li></ul><div class="pills"><span>YOLOv9</span><span>CNN</span><span>LSTM</span></div><a class="repo" href="https://github.com/anshiid/Agri-Bot-System" target="_blank" rel="noopener">Repo &#8599;</a></article>
+    <article class="bx s3"><span class="ghost" aria-hidden="true">RAG</span><h3>Incident-atlas</h3><span class="sub">AI Incident Investigator</span><ul><li>Built an AI-based system to analyze log files, detect anomalies using Isolation Forest, and identify affected services and severity.</li><li>Integrated RAG, semantic search, Qwen3, and FastAPI to investigate incidents and provide technical explanations and troubleshooting suggestions.</li></ul><div class="pills"><span>Isolation Forest</span><span>RAG</span><span>Semantic Search</span><span>Qwen3</span><span>FastAPI</span></div><a class="repo" href="https://github.com/anshiid/Incident-atlas" target="_blank" rel="noopener">Repo &#8599;</a></article>
+    <article class="bx s3 warm"><span class="ghost" aria-hidden="true">BERT</span><h3>Assessiva</h3><span class="sub">Automatic Essay Grading System</span><ul><li>Built an NLP-based grading engine using a fine-tuned BERT model to automatically score student essays, replacing manual evaluation.</li><li>Applied text-preprocessing and embedding techniques to improve scoring consistency against human-graded benchmarks.</li></ul><div class="pills"><span>BERT</span><span>NLP</span><span>Text Embeddings</span></div><a class="repo" href="https://github.com/anshiid/Assessiva" target="_blank" rel="noopener">Repo &#8599;</a></article>
   </div>
 </div></section>
 
@@ -176,7 +188,6 @@ h2{font-size:clamp(2.4rem,6vw,3.8rem);margin-bottom:40px}
   <div class="bento">
     <div class="bx s4"><span class="k">Education</span><h3>B.Tech in Artificial Intelligence and Data Science</h3><p>APJ Abdul Kalam Technological University (KTU), MEA Engineering College, Perinthalmanna, Kerala</p><small>2022 – 2026</small></div>
     <div class="bx s2 warm"><span class="k">Languages</span><button type="button" class="lb" aria-expanded="false"><span class="ln">English</span><span class="lv"><span class="dots" aria-hidden="true"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i></i></span>Fluent</span></button><button type="button" class="lb" aria-expanded="false"><span class="ln">Malayalam</span><span class="lv"><span class="dots" aria-hidden="true"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></span>Native</span></button><button type="button" class="lb" aria-expanded="false"><span class="ln">Hindi</span><span class="lv"><span class="dots" aria-hidden="true"><i class="f"></i><i class="f"></i><i></i><i></i><i></i></span>Basic</span></button><small>Hover or tap a language</small></div>
-    <div class="bx s6 warm"><span class="k">Internship</span><p style="font-size:1.15rem;line-height:1.55;margin:0;max-width:none;text-wrap:balance">Full Stack Development Intern with a strong focus on frontend development, building responsive web applications while expanding hands-on expertise in backend technologies.</p></div>
   </div>
 </div></section>
 
